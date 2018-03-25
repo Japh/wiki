@@ -67,7 +67,8 @@ export default function wiki(options = {}) {
 		return pagination(apiOptions, {
 			list: 'search',
 			srsearch: query,
-			srlimit: limit
+			srlimit: limit,
+			srwhat:'text'
 		}, res => res.query.search.map(article => article.title));
 	}
 
