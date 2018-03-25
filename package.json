@@ -52,8 +52,7 @@
     "docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose",
     "lint": "eslint src",
     "publish-docs": "PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && gh-pages -d docs/wikijs/$PACKAGE_VERSION ",
-    "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "postinstall": "babel src --out-dir dist --source-maps true"
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "homepage": "https://github.com/dijs/wiki",
   "bugs": "https://github.com/dijs/wiki/issues",
